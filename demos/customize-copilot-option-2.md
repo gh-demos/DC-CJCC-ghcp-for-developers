@@ -68,7 +68,7 @@ Return exactly these sections:
 **Source:** [Agents](https://awesome-copilot.github.com/agents/)
 
 1. Switch to **Blueprint Mode** from awesome-copilot agents in Copilot chat. This mode is designed for planning and architecture tasks.
-2. Review the Blueprint Mode markdown template in `/.github/agents/blueprint-mode.md` to understand the expected output structure.
+2. Review the Blueprint Mode markdown template in `/.github/agents/blueprint-mode.agent.md` to understand the expected output structure.
 3. Use this prompt:
 
 ```markdown
@@ -141,7 +141,7 @@ Hook used in this challenge: **Fix Broken Links**
 3. Run the hook with `bash .github/hooks/fix-broken-links/link-fix.sh ./demos/customize-copilot-option-2.md` in your terminal. If you are using PowerShell, use the .ps1 script.
 4. Observe the output and confirm that it identifies broken links in this document. Decide if you want to remove the broken link, custom replace it with a valid link, or skip it.
 
-**Broken Link**
+**Broken Link** *(intentionally planted for this exercise — the hook should detect it)*
 ```markdown
 - An HTML anchor:
   <a href="https://github.com/github/awesome-copilot/this-page-does-not-exist-404">read more</a>
