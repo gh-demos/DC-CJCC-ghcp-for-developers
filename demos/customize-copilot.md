@@ -49,7 +49,7 @@ For this demo, try the same coding task with different models and note the diffe
 ```markdown
 - /src/app/gallery/page.tsx
 - /src/lib/mock-photo-data.ts
-- /src/components/GalleryGrid.tsx
+- /src/components/gallery/GalleryGrid.tsx
 ```
 4. Stay on the last page: GalleryGrid and highlight lines 26 - 43
 5. Add in below prompt:
@@ -110,7 +110,7 @@ help me create a prompt files for creating unit test generation for the UI compo
 
 ## 🎭 Step 4: Utilize Custom Agent Modes
 
-1. Look over the `Plan.agent.md` in the `.github/agents` file to see the expected behavior of the mode
+1. Look over the `blueprint-mode.agent.md` in the `.github/agents` folder to see the expected behavior of the mode
 2. Go to GitHub Copilot Chat
 3. Update mode to "Plan" mode
 4. Add in prompt below and look over the suggestion

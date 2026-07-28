@@ -20,9 +20,9 @@ More information on installation can be found in the [README](../README.md) file
 
 1. **Open the repository in your IDE** (e.g., VS Code)
 2. **Create new branch:** `git checkout -b USERNAME-copilot-exercises`
-2. **Install packages**: Run `npm install` in the terminal
-3. **Start the development server**: Run `npm run dev`
-4. **Open the project in your browser**: Go to [http://localhost:3000](http://localhost:3000) for a live preview
+3. **Install packages**: Run `npm install` in the terminal
+4. **Start the development server**: Run `npm run dev`
+5. **Open the project in your browser**: Go to [http://localhost:3000](http://localhost:3000) for a live preview
 
 Continue with the demo by following the steps below.
 
@@ -144,6 +144,7 @@ Fix pagination in GalleryGrid.tsx: Change startIndex from 0 to (currentPage - 1)
 
 1. **Select generated code:** Highlight the code that was created
 2. **Get review** Right-click → Select "Review"
+3. **Read feedback:** Review the suggestions shown inline or in the Problems tab
 4. **Process feedback:** Review suggestions and accept/discard as needed
 
 ### Option B: Source Code AI-Powered Review

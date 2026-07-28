@@ -56,7 +56,7 @@ src/app/layout.tsx
 next.config.ts
 ```
 9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/3` and press `save`
+10. Add issue link `https://github.com/nate-demo/copilot-intermediate-gallery-repo/issues/3` and press `save`
 11. Select `Add sources` and select `Add text content`
 12. Add the following content and press `save`
 ```markdown
@@ -125,7 +125,7 @@ src/app/page.tsx
 package.json
 ```
 9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/4` and press `save`
+10. Add issue link `https://github.com/nate-demo/copilot-intermediate-gallery-repo/issues/4` and press `save`
 11. Select `Add sources` and select `Add text content`
 12. Add the following content and press `save`
 ```markdown
@@ -156,9 +156,9 @@ package.json
 - **Static Sites**: Docusaurus, GitBook, MkDocs
 ```
 
-### Share your Space[OPTIONAL]
+### Share your Space (Optional)
 
-**This option is ONLY if you made the Owner an organization**
+> **⚠️ Note:** This step is only applicable if you set the Space **Owner** to an organization. Skip ahead to **Step 2** if you used your personal account.
 
 13. Select `Share` on the top right side
 14. Update `No Access` to `Viewer`

@@ -98,7 +98,7 @@ Use Copilot App! This is a new way to use Copilot that allows you to automate wo
 8. Look over the other options in that panel. Select `Terminal` and run `npm run dev` to view the changes in your browser.
 9. `cmd + click` on the `http://localhost:3000` link to open the app directly in GitHub Copilot App.
 10. Once you are happy with the changes, click on the dropdown of `Create PR` on the top right to select `Create draft PR`.
-11. Click `Create draft PR` and view it on [GitHub](https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/pulls) OR in the GitHub Copilot App by selecting `PR #` on the top right of the chat.
+11. Click `Create draft PR` and view it on [GitHub](https://github.com/nate-demo/copilot-intermediate-gallery-repo/pulls) OR in the GitHub Copilot App by selecting `PR #` on the top right of the chat.
 
 Feel free to complete that PR to see the change in you current branch.
 

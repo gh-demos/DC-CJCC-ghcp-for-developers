@@ -14,7 +14,7 @@ By the end of this demo, you will:
 
 ## 🎯 Step 1: Assign GitHub Copilot to an Issue
 
-1. Open the issue you created in the previous MCP exercise.
+1. Open the issue you created in the previous MCP exercise. If you skipped that step, [create a new issue](https://github.com/nate-demo/copilot-intermediate-gallery-repo/issues/new) in this repo — a feature request such as "Add dark mode toggle" works well.
 2. Assign **GitHub Copilot** to the issue.
 3. Observe as Copilot works through the steps and generates a solution.
 

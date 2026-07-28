@@ -101,7 +101,7 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
 1. **Navigate to GitHub Copilot:** Go to [https://github.com/copilot](https://github.com/copilot)
 2. **Start a chat:** Start a conversation. In the chat window, type the following prompt:
    ```markdown
-   What are the advantages of the Go programming language?
+   What are the best practices for optimizing image loading performance in a Next.js 15 photo gallery?
    ```
 3. **Share the conversation:** Click the **"Share"** button at the top-right of the chat window
 4. **Select share:** Select share and copy the link to share with your team
@@ -120,6 +120,17 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
 - Share conversations that solved complex problems
 - Include context about when and why certain approaches work
 - Tag conversations with relevant keywords for easy discovery
+
+## ✅ Completion Checklist
+
+Mark off each item as you complete it:
+
+- [ ] Opened the Copilot Chat Debug panel and explored prompts, system prompts, and metadata
+- [ ] Exported a chat conversation and confirmed the output file was created
+- [ ] Imported a chat conversation shared by a teammate (or re-imported your own)
+- [ ] Added at least one personal instruction and observed a change in Copilot's responses
+- [ ] Shared a conversation and copied the shareable link
+- [ ] Browsed shared conversations in "Manage shared conversations"
 
 ## 🚀 What's Next?
 
