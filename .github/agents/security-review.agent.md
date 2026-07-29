@@ -19,7 +19,7 @@ non-obvious issues. A premium reasoning model (Claude Opus) is the right fit.
 
 ## Scope
 
-This is a Next.js 15 + React 19 + TypeScript app. Prioritize:
+This is a Next.js 16 + React 19 + TypeScript app. Prioritize:
 
 - **XSS**: any use of `dangerouslySetInnerHTML`, unsanitized user input rendered to the DOM, unsafe URL handling.
 - **Unsafe file handling**: the upload flow in `src/components/upload/UploadZone.tsx` — validate file type/size checks, MIME sniffing, path handling, and preview/object-URL usage.

@@ -1,6 +1,6 @@
 # Photo Gallery & Portfolio
 
-A professional photo gallery and portfolio application built with Next.js 15, TypeScript, and Tailwind CSS. This project is designed for **demoing GitHub Copilot features** in a real-world, component-driven Next.js application. The included demos showcase how Copilot can assist with code generation, refactoring, UI building, and more.
+A professional photo gallery and portfolio application built with Next.js 16, TypeScript, and Tailwind CSS. This project is designed for **demoing GitHub Copilot features** in a real-world, component-driven Next.js application. The included demos showcase how Copilot can assist with code generation, refactoring, UI building, and more.
 
 ## Demos
 
@@ -29,7 +29,7 @@ Workshop attendees using `tdcj.ghe.com` must first follow Steps 1-6 in the [Work
 
 ### Technical Requirements
 
-- **Node.js** v18 or newer
+- **Node.js** v20.9 or newer
 - **npm** (or yarn, pnpm, bun)
 
 ### Quick Start with GitHub Codespaces
@@ -48,7 +48,7 @@ The codespace will automatically:
 - Configure GitHub Copilot and essential VS Code extensions
 - Forward port 3000 for the Next.js application
 
-Once ready, you can access the application at the forwarded port URL provided in the terminal.
+Once ready, open the forwarded port 3000 URL from the notification or the **Ports** panel. If the server does not start, check `/tmp/nextjs-dev.log` in the codespace.
 
 ### Local Installation
 
@@ -71,7 +71,7 @@ Once ready, you can access the application at the forwarded port URL provided in
 
 ```bash
 src/
-├── app/                 # Next.js 15 App Router pages
+├── app/                 # Next.js 16 App Router pages
 ├── components/          # Reusable React components
 ├── lib/                 # Utility functions and helpers
 demos/                   # Demo guides and templates

@@ -37,7 +37,7 @@ This exercise uses the **Review upload security** and **Create API documentation
 5. Select `Instructions` and add the following prompt:
 
 ```markdown
-You are a security expert helping to analyze and improve the security posture of a Next.js 15 photo gallery application. Focus on:
+You are a security expert helping to analyze and improve the security posture of a Next.js 16 photo gallery application. Focus on:
 
 - File upload security vulnerabilities and mitigations
 - Input validation and sanitization
@@ -112,7 +112,7 @@ next.config.ts
 5. Select `Instructions` and add the following prompt:
 
 ```markdown
-You are a technical documentation specialist helping to create comprehensive documentation for a Next.js 15 photo gallery application. Focus on:
+You are a technical documentation specialist helping to create comprehensive documentation for a Next.js 16 photo gallery application. Focus on:
 
 - API documentation using OpenAPI/Swagger specifications
 - Component documentation with usage examples
@@ -222,7 +222,7 @@ I need to create professional documentation for our photo gallery application. P
 
 1. Generate an OpenAPI 3.0 specification for our photo management API endpoints
 2. Create detailed component documentation with usage examples for our UI components
-3. Write an Architecture Decision Record (ADR) for choosing Next.js 15 with TypeScript
+3. Write an Architecture Decision Record (ADR) for choosing Next.js 16 with TypeScript
 4. Improve our README with installation, development, and deployment instructions
 5. Create a contributing guide for other developers
 

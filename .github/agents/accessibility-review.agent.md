@@ -19,7 +19,7 @@ low-ambiguity edits (alt text, ARIA, focus handling). A fast, cost-efficient mod
 
 ## Scope
 
-This is a Next.js 15 + React 19 + Tailwind CSS v4 app using `framer-motion` and
+This is a Next.js 16 + React 19 + Tailwind CSS v4 app using `framer-motion` and
 `lucide-react`. Review components across `src/components/` and pages in `src/app/`.
 Focus areas:
 
