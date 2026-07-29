@@ -1,8 +1,8 @@
 # Features Demo
 
-Welcome to this repository! You're probably wondering what it is and how it works. We will be working with this repository for the duration of this training, so it's important to find out what it's doing now!
+Welcome to this repository. You're probably wondering what it is and how it works. We will use this repository throughout the training, so it's important to understand what it does now.
 
-Let's start off by learning the different modes.
+Let's start by exploring the different modes.
 
 ## What You'll Learn
 
@@ -21,7 +21,7 @@ By the end of this demo, you will:
 More information on installation can be found in the [README](../README.md) file. For a quick start, use the following steps:
 
 1. **Open the repository in your IDE** (e.g., VS Code)
-2. **Create new branch:** `git checkout -b USERNAME-copilot-exercises`
+2. **Create a new branch:** `git checkout -b USERNAME-copilot-exercises`
 3. **Install packages**: Run `npm install` in the terminal
 4. **Start the development server**: Run `npm run dev`
 5. **Open the project in your browser**: Go to [http://localhost:3000](http://localhost:3000) for a live preview
@@ -43,7 +43,7 @@ Delegate session: Local
 /
 ```
 
-Scroll through the available commands listed in the dropdown.
+Scroll through the available tools listed in the dropdown.
 
 **2:** View the available tools by typing the following in the Copilot chat:
 
@@ -104,15 +104,15 @@ Tell me about the improvements that can be made in this repo.
 
 **💡 Pro Tip:** Copilot can help not only with learning but also with planning and ideas!
 
-## 💻 Step 3: Generate Code with Copilot code completions
+## 💻 Step 3: Generate Code with Copilot Code Completions
 
-Keep the Copilot Chat session, we will be using it in Step 4 to plan and implement. For this step, utilize inline code completions directly in your editor to generate the footer code.
+Keep the Copilot Chat session open; we will use it in Step 4 to plan and implement. For this step, use inline code completions directly in your editor to generate the footer code.
 
 ### Code Completions Instructions
 
 1. **Navigate to file:** Open [`src/app/layout.tsx`](../src/app/layout.tsx)
-2. **Find location:** Go to line 52 `{/* REPLACE THIS COMMENT */}`
-3. **Remove line 52 comment:** and replace it with the following comment:
+2. **Find location:** Go to the `{/* REPLACE THIS COMMENT */}` marker near the end of the file.
+3. **Replace the comment** with the following:
 
 ```tsx
 {
@@ -124,33 +124,33 @@ Keep the Copilot Chat session, we will be using it in Step 4 to plan and impleme
 5. **Accept suggestion:** Press `Tab` to accept or `Esc` to dismiss
 6. **Check your changes:** Save the file and refresh [http://localhost:3000](http://localhost:3000) to see your new footer
 
-## 📝 Step 4: Plan and implement
+## 📝 Step 4: Plan and Implement
 
 Mode: Plan
 Delegate session: Local
 
 **Goal:** Pick one improvement, create a plan, then implement and verify.
 
-Open Copilot Chat window with the list of improvements suggested for the project. Choose one of the improvements you would like to implement and follow the steps below.
+Open your Copilot Chat session and review the list of improvements suggested for the project. Choose one improvement you would like to implement and follow the steps below.
 
 If you are unsure which improvement to pick, we have provided a suggested implementation option to continue the demo.
 
 <details>
 <summary>Implementation option</summary>
-Fix pagination in GalleryGrid.tsx: Change startIndex from 0 to (currentPage - 1) * photosPerPage so that page navigation actually shows different photos instead of repeating the same set.
+Fix pagination in `src/components/gallery/GalleryGrid.tsx`: Change `startIndex` from `0` to `(currentPage - 1) * photosPerPage` so page navigation shows different photos instead of repeating the same set.
 </details>
 <br>
 
 1. Select Plan mode in Copilot Chat
 2. Ask Copilot to generate a step-by-step implementation plan for your chosen improvement. Example prompt can be found in the `Implementation option` above.
-3. Look over the generated plan and answer any questions that might pop up in chat. You can select an option, or type in a custom response.
+3. Look over the generated plan and answer any questions that might pop up in chat. You can select an option or type a custom response.
 4. Once approved, select `Start Implementation`
 5. Review and accept changes
 
 **What to notice**
 
 - You can customize the plan and give more details to Copilot during the plan phase
-- Once implementation starts, the mode switch from `plan` to `agent`
+- Once implementation starts, the mode switches from `plan` to `agent`
 - Copilot lists out the `Todos` and guides you through each step it is taking.
 
 ## 📊 Step 5: Review and Commit Your Changes

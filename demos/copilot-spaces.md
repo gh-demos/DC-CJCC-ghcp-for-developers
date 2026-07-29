@@ -27,9 +27,9 @@ This exercise uses the **Review upload security** and **Create API documentation
 
 ### Group A Option: Security Analysis & Hardening
 
-1. Type in name `Photo Gallery - Security Assessment`
+1. Enter the name `Photo Gallery - Security Assessment`
 2. Select the owner `Username` OR `OrgName`
-3. Add in description `Implement security best practices for the photo gallery application`
+3. Enter the description `Implement security best practices for the photo gallery application`
 4. Select `Save`
 
 **Adding instructions**
@@ -50,7 +50,7 @@ You are a security expert helping to analyze and improve the security posture of
 Provide specific code examples and security recommendations that follow industry standards and OWASP guidelines. Consider both client-side and server-side security measures.
 ```
 
-6. Select save
+6. Select `Save`
 
 **Adding sources**
 
@@ -102,9 +102,9 @@ next.config.ts
 
 ### Group B Option: Documentation Generation & API Design
 
-1. Type in name `Photo Gallery - Documentation Hub`
+1. Enter the name `Photo Gallery - Documentation Hub`
 2. Select the owner `Username` OR `OrgName`
-3. Add in description `Create comprehensive documentation and API design documentation for the photo gallery application`
+3. Enter the description `Create comprehensive documentation and API design documentation for the photo gallery application`
 4. Select `Save`
 
 **Adding instructions**
@@ -125,7 +125,7 @@ You are a technical documentation specialist helping to create comprehensive doc
 Follow industry best practices for technical writing, API documentation standards (OpenAPI 3.0), and modern documentation tools. Create clear, actionable documentation that serves both developers and end users.
 ```
 
-6. Select save
+6. Select `Save`
 
 **Adding sources**
 
@@ -191,12 +191,12 @@ package.json
 
 **Goal:** Use an existing Copilot Space to complete the task listed below.
 
-**Challenge:** If your group created the Space in an organization, switch Copilot Spaces to try out the other groups! I.e, if you choose **Option B** in the previous exercise, this time you will be following **Option A** exercise and vice versa.
+**Challenge:** If your group created the Space in an organization, switch Copilot Spaces to try the other group's workflow. For example, if you chose **Option B** in the previous exercise, follow **Option A** this time, and vice versa.
 
 ### Group A Option
 
 1. Go to the Copilot Space
-2. Type in the following prompt to analyze security vulnerabilities:
+2. Enter the following prompt to analyze security vulnerabilities:
 
 ```markdown
 I need help identifying and fixing security vulnerabilities in our photo gallery application. Please analyze our file upload component and suggest:
@@ -215,7 +215,7 @@ Based on the OWASP Top 10 guidelines, what are the most critical security issues
 ### Group B Option
 
 1. Go to the Copilot Space
-2. Type in the following prompt to create comprehensive documentation:
+2. Enter the following prompt to create comprehensive documentation:
 
 ```markdown
 I need to create professional documentation for our photo gallery application. Please help me:

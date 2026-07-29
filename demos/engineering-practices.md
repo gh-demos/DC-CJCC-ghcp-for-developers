@@ -1,6 +1,6 @@
 # Engineering Practices Demo
 
-Welcome to the GitHub Copilot engineering practices demo! Here we're going to get comfortable with the professional tools and features in GitHub Copilot. We'll start in the VS Code IDE and then move to github.com for additional collaboration features.
+Welcome to the GitHub Copilot engineering practices demo. Here, you'll get comfortable with professional tools and features in GitHub Copilot. We'll start in the VS Code IDE and then move to GitHub.com for additional collaboration features.
 
 ## What You'll Learn
 
@@ -97,7 +97,7 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
 1. **Navigate to GitHub Copilot:** Go to [https://github.com/copilot](https://github.com/copilot)
 2. **Access settings:** Click on your user icon on the bottom-left corner
 3. **Open personal instructions:** Select **"Personal instructions"**
-4. **Add in instructions:** You can add customize guidelines into how Copilot responds to your prompts
+4. **Add instructions:** You can add custom guidelines for how Copilot responds to your prompts.
 
 #### What to Explore
 
@@ -117,7 +117,7 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
    What are the best practices for optimizing image loading performance in a Next.js 16 photo gallery?
    ```
 3. **Share the conversation:** Click the **"Share"** button at the top-right of the chat window
-4. **Select share:** Select share and copy the link to share with your team
+4. **Select share:** Select Share and copy the link to share with your team
 
 #### View Shared Conversation
 
@@ -150,6 +150,6 @@ Mark off each item as you complete it:
 
 ## 🚀 What's Next?
 
-Congratulations! Second demo has been complete.
+Congratulations! You have completed the second demo.
 
 👉 **[Start Customize Copilot Demo](./customize-copilot.md)**
