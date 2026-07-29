@@ -13,7 +13,7 @@ export interface Photo {
 export const mockPhotos: Photo[] = [
   {
     id: '1',
-    url: '/placeholder-1.jpg',
+    url: '/images/gallery/desert-sunset.webp',
     title: 'Sunset Landscape',
     tags: ['landscape', 'sunset', 'nature'],
     likes: 124,
@@ -24,7 +24,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '2',
-    url: '/placeholder-2.jpg',
+    url: '/images/gallery/portrait-study.webp',
     title: 'Portrait Study',
     tags: ['portrait', 'studio', 'professional'],
     likes: 89,
@@ -35,7 +35,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '3',
-    url: '/placeholder-3.jpg',
+    url: '/images/gallery/architecture.webp',
     title: 'Architecture',
     tags: ['architecture', 'building', 'city'],
     likes: 156,
@@ -46,7 +46,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '4',
-    url: '/placeholder-4.jpg',
+    url: '/images/gallery/nature-close-up.webp',
     title: 'Nature Close-up',
     tags: ['macro', 'nature', 'flowers'],
     likes: 203,
@@ -57,7 +57,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '5',
-    url: '/placeholder-5.jpg',
+    url: '/images/gallery/street-photography.webp',
     title: 'Street Photography',
     tags: ['street', 'candid', 'urban'],
     likes: 91,
@@ -68,9 +68,9 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '6',
-    url: '/placeholder-6.jpg',
-    title: 'Wedding Moment',
-    tags: ['wedding', 'love', 'ceremony'],
+    url: '/images/gallery/quiet-afternoon.webp',
+    title: 'Quiet Afternoon',
+    tags: ['lifestyle', 'outdoor', 'relaxation'],
     likes: 267,
     downloads: 112,
     views: 3421,
@@ -79,7 +79,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '7',
-    url: '/placeholder-7.jpg',
+    url: '/images/gallery/mountain-range.webp',
     title: 'Mountain Vista',
     tags: ['landscape', 'mountain', 'adventure'],
     likes: 189,
@@ -90,9 +90,9 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '8',
-    url: '/placeholder-8.jpg',
-    title: 'Urban Nightscape',
-    tags: ['night', 'city', 'lights'],
+    url: '/images/gallery/coastal-vista.webp',
+    title: 'Coastal Vista',
+    tags: ['landscape', 'coast', 'adventure'],
     likes: 234,
     downloads: 95,
     views: 2543,
@@ -101,7 +101,7 @@ export const mockPhotos: Photo[] = [
   },
   {
     id: '9',
-    url: '/placeholder-9.jpg',
+    url: '/images/gallery/wildlife-portrait.webp',
     title: 'Wildlife Portrait',
     tags: ['wildlife', 'nature', 'animal'],
     likes: 312,

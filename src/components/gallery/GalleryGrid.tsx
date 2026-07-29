@@ -1,9 +1,48 @@
 'use client';
 
 import { useState } from 'react';
-import { Heart, Download, Share2, Eye, Tag } from 'lucide-react';
+import Image from 'next/image';
+import { Heart, Download, Share2, Eye, Tag, ImageOff } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Photo, mockPhotos } from '@/lib/mock-photo-data';
+
+interface PhotoImageProps {
+  photo: Photo;
+  sizes: string;
+}
+
+function PhotoImage({ photo, sizes }: PhotoImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <>
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 animate-pulse bg-slate-200 dark:bg-slate-700" aria-hidden="true" />
+      )}
+      {!hasError ? (
+        <Image
+          src={photo.url}
+          alt={photo.title}
+          fill
+          sizes={sizes}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setHasError(true)}
+          className={`object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        />
+      ) : (
+        <div
+          role="img"
+          aria-label={`${photo.title} image unavailable`}
+          className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300"
+        >
+          <ImageOff className="h-8 w-8" aria-hidden="true" />
+          <span className="text-sm font-medium">Image unavailable</span>
+        </div>
+      )}
+    </>
+  );
+}
 
 interface GalleryGridProps {
   limit?: number;
@@ -45,7 +84,6 @@ export function GalleryGrid({
   // Calculate pagination
   const totalPhotos = filteredPhotos.length;
   const photosPerPage = limit;
-  const totalPages = Math.ceil(totalPhotos / photosPerPage);
   const startIndex = 0;
   const endIndex = currentPage * photosPerPage;
   const displayedPhotos = filteredPhotos.slice(startIndex, endIndex);
@@ -76,17 +114,10 @@ export function GalleryGrid({
             className="group relative card-elevated overflow-hidden"
           >
             {/* Photo Container */}
-            <div className="relative aspect-[4/3] overflow-hidden">
-              {/* Placeholder colored rectangles since we don't have actual images */}
-              <div 
-                className={`w-full h-full ${
-                  index % 6 === 0 ? 'bg-gradient-to-br from-blue-400 to-blue-600' :
-                  index % 6 === 1 ? 'bg-gradient-to-br from-green-400 to-green-600' :
-                  index % 6 === 2 ? 'bg-gradient-to-br from-purple-400 to-purple-600' :
-                  index % 6 === 3 ? 'bg-gradient-to-br from-pink-400 to-pink-600' :
-                  index % 6 === 4 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600' :
-                  'bg-gradient-to-br from-red-400 to-red-600'
-                }`}
+            <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-700">
+              <PhotoImage
+                photo={photo}
+                sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2rem), calc(33vw - 2rem)"
               />
               
               {/* Overlay */}
@@ -224,9 +255,13 @@ export function GalleryGrid({
                   ✕
                 </button>
               </div>
-              <p className="text-slate-600 dark:text-slate-400">
-                Photo details and larger view would be implemented here.
-              </p>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700">
+                <PhotoImage
+                  key={selectedPhoto.id}
+                  photo={selectedPhoto}
+                  sizes="(max-width: 768px) calc(100vw - 5rem), 848px"
+                />
+              </div>
             </div>
           </div>
         </div>
