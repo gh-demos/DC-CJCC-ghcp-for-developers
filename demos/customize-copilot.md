@@ -168,6 +168,8 @@ Custom instructions work in tandem with MCP to help you guide the agent.
 
 ### Part Two: MCP Authentication
 
+Because this workshop uses `tdcj.ghe.com`, VS Code must be configured to authenticate against the Enterprise host instead of the default `github.com`. This configuration is not needed for `github.com` accounts.
+
 Configure VS Code to authenticate Copilot and MCP against the workshop Enterprise:
 
 1. Open VS Code Settings and search for `enterprise`.
