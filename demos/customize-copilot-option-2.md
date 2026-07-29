@@ -3,11 +3,13 @@
 Welcome to the GitHub Copilot customization challenge lab. This version is built around five advanced customization areas from awesome-copilot and uses this Photo Gallery repo for realistic tasks.
 
 ## What You'll Learn
+
 By the end of this demo, you will:
+
 - [ ] Write and validate instruction-driven outputs
 - [ ] Use agent modes to produce role-specific outcomes
 - [ ] Apply skills-style workflows with clear triggers and deliverables
-- [ ] Use hooks identify broken links
+- [ ] Use hooks to identify broken links
 
 **Estimated Time:** 25-30 minutes
 
@@ -24,7 +26,7 @@ By the end of this demo, you will:
 
 ## 🎯 Challenge 1: Instructions
 
-**Goal:** prove that instruction quality changes output quality.
+**Goal:** Prove that instruction quality changes output quality.
 
 **Source:** [Instructions](https://awesome-copilot.github.com/instructions/)
 
@@ -33,17 +35,18 @@ By the end of this demo, you will:
 ```markdown
 Propose a hardening plan for UploadZone.
 Return exactly these sections:
-1) Constraints from instructions
-2) Proposed edits
-3) Regression risks
-4) Validation checklist
+
+1. Constraints from instructions
+2. Proposed edits
+3. Regression risks
+4. Validation checklist
 ```
 
 2. Run the same prompt twice:
    - First without `/.github/copilot-instructions.md`
-     - rename `/.github/copilot-instructions.md` to `/.github/copilot-instructions.md.bak`
+   - Rename `/.github/copilot-instructions.md` to `/.github/copilot-instructions.md.bak`
    - Then with it
-     - rename it back to `/.github/copilot-instructions.md`
+   - Rename it back to `/.github/copilot-instructions.md`
 
 3. Compare differences.
    - Specifically, look for:
@@ -52,6 +55,7 @@ Return exactly these sections:
      - Quality of proposed edits. Did they follow repo conventions?
 
 ### Additional instructions best practices
+
 - Keep instructions short and precise on the repo's unique conventions.
   - Instructions that are too long can degrade output quality.
   - Use `/.github/copilot-instructions.md` to outline the project, architecture, and best practices.
@@ -63,25 +67,27 @@ Return exactly these sections:
 
 ## 🎭 Challenge 2: Agents
 
-**Goal:** use agent specialization to improve planning quality.
+**Goal:** Use agent specialization to improve planning quality.
 
 **Source:** [Agents](https://awesome-copilot.github.com/agents/)
 
 1. Switch to **Blueprint Mode** from awesome-copilot agents in Copilot chat. This mode is designed for planning and architecture tasks.
-2. Review the Blueprint Mode markdown template in `/.github/agents/blueprint-mode.md` to understand the expected output structure.
+2. Review the Blueprint Mode markdown template in `/.github/agents/blueprint-mode.agent.md` to understand the expected output structure.
 3. Use this prompt:
 
 ```markdown
 Design a resilient "bulk photo operations" flow for admin:
+
 - multi-select in gallery grid
 - bulk tag assignment/removal
 - bulk download metadata export
 - rollback strategy for failed operations
-Include architecture decisions, guardrails, and a test matrix.
+  Include architecture decisions, guardrails, and a test matrix.
 ```
 
 4. Switch to default Agent mode and run the same prompt.
 5. Compare depth, structure, and implementation readiness.
+
 - Specifically, look for:
   - Implementation details. Are they feasible and well-explained?
   - Structure. Is the output organized into clear sections?
@@ -91,7 +97,7 @@ Include architecture decisions, guardrails, and a test matrix.
 
 ## 🧩 Challenge 3: Skills
 
-**Goal:** run an awesome-copilot skill in a unique test-engineering workflow.
+**Goal:** Run an awesome-copilot skill in a unique test-engineering workflow.
 
 **Source:** [Skills](https://awesome-copilot.github.com/skills/)
 
@@ -106,6 +112,7 @@ Skill reference: [javascript-typescript-jest](https://github.com/github/awesome-
 ```markdown
 /javascript-typescript-jest Design and generate a test suite for UploadZone behavior.
 Requirements:
+
 - include tests for drag-drop states, file-type validation, and preview rendering
 - include one accessibility-focused test (keyboard and aria behavior)
 - include setup notes for jest config if missing
@@ -116,10 +123,11 @@ Requirements:
 
 ```markdown
 /javascript-typescript-jest Now expand the suite with edge-case tests:
+
 - duplicate upload attempts
 - very large file rejection behavior
 - unsupported MIME type handling
-Then provide a "test maintenance checklist" for future UI changes.
+  Then provide a "test maintenance checklist" for future UI changes.
 ```
 
 5. Evaluate whether output behaved like a reusable skill execution.
@@ -128,7 +136,7 @@ Then provide a "test maintenance checklist" for future UI changes.
 
 ## 🪝 Challenge 4: Hooks
 
-**Goal:** use a hook to identify broken links in a markdown file.
+**Goal:** Use a hook to identify broken links in a markdown file.
 
 **Source:** [Hooks](https://github.com/github/awesome-copilot/tree/main/hooks)
 
@@ -139,9 +147,10 @@ Hook used in this challenge: **Fix Broken Links**
 1. View and review the Fix Broken Links hook in `.github/hooks/fix-broken-links/`
 2. Make the script executable with `chmod +x .github/hooks/fix-broken-links/link-fix.sh` OR `chmod +x .github/hooks/fix-broken-links/link-fix.ps1` depending on your preferred shell.
 3. Run the hook with `bash .github/hooks/fix-broken-links/link-fix.sh ./demos/customize-copilot-option-2.md` in your terminal. If you are using PowerShell, use the .ps1 script.
-4. Observe the output and confirm that it identifies broken links in this document. Decide if you want to remove the broken link, custom replace it with a valid link, or skip it.
+4. Observe the output and confirm that it identifies broken links in this document. Decide if you want to remove the broken link, replace it manually with a valid link, or skip it.
 
-**Broken Link**
+**Broken Link** _(intentionally planted for this exercise — the hook should detect it)_
+
 ```markdown
 - An HTML anchor:
   <a href="https://github.com/github/awesome-copilot/this-page-does-not-exist-404">read more</a>

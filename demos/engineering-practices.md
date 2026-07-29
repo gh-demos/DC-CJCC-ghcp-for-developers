@@ -1,9 +1,11 @@
 # Engineering Practices Demo
 
-Welcome to the GitHub Copilot engineering practices demo! Here we're going to get comfortable with the professional tools and features in GitHub Copilot. We'll start in the VS Code IDE and then move to github.com for additional collaboration features.
+Welcome to the GitHub Copilot engineering practices demo. Here, you'll get comfortable with professional tools and features in GitHub Copilot. We'll start in the VS Code IDE and then move to GitHub.com for additional collaboration features.
 
 ## What You'll Learn
+
 By the end of this demo, you will:
+
 - [ ] Understand how to debug and inspect Copilot's decision-making process
 - [ ] Know how to share chat conversations with team members
 - [ ] Be familiar with system prompts and their importance
@@ -20,17 +22,21 @@ GitHub Copilot has many features designed to help engineering teams understand A
 **Why this matters:** Understanding how Copilot makes suggestions helps you write better prompts and trust the AI's recommendations.
 
 #### Method 1: Using Keyboard Shortcut
+
 1. Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
 2. Type "Copilot Chat Debug"
 3. Select **"Copilot Chat Debug: Focus on Copilot Chat Debug View"**
 
 #### Method 2: Using the Menu
+
 1. Go to **View** → **Command Palette**
 2. Type "Copilot Chat Debug"
 3. Select **"Copilot Chat Debug: Focus on Copilot Chat Debug View"**
 
 #### What You'll See
+
 Once the debug panel opens, you can explore:
+
 - **Prompts:** The actual prompts sent to the AI
 - **System Prompts:** Background instructions given to Copilot
 - **Metadata:** Context information and settings
@@ -47,11 +53,13 @@ Once the debug panel opens, you can explore:
 #### Export a Chat Conversation
 
 **Method 1: Keyboard Shortcut**
+
 1. Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
 2. Type "Chat: Export"
 3. Select **"Chat: Export Chat..."**
 
 **Method 2: Menu Navigation**
+
 1. Go to **View** → **Command Palette**
 2. Type "Chat: Export"
 3. Select **"Chat: Export Chat..."**
@@ -61,11 +69,13 @@ Once the debug panel opens, you can explore:
 #### Import a Chat Conversation
 
 **Method 1: Keyboard Shortcut**
+
 1. Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
 2. Type "Chat: Import"
 3. Select **"Chat: Import Chat..."**
 
 **Method 2: Menu Navigation**
+
 1. Go to **View** → **Command Palette**
 2. Type "Chat: Import"
 3. Select **"Chat: Import Chat..."**
@@ -83,12 +93,14 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
 **Why this matters:** Prompts define how Copilot behaves across your organization. Understanding these helps ensure consistent, high-quality code generation that follows your team's standards.
 
 #### Personal Instructions
+
 1. **Navigate to GitHub Copilot:** Go to [https://github.com/copilot](https://github.com/copilot)
 2. **Access settings:** Click on your user icon on the bottom-left corner
 3. **Open personal instructions:** Select **"Personal instructions"**
-4. **Add in instructions:** You can add customize guidelines into how Copilot responds to your prompts
+4. **Add instructions:** You can add custom guidelines for how Copilot responds to your prompts.
 
 #### What to Explore
+
 - **Personal instructions:** Are there any preferences you'd like in the instructions? Test it out!
 
 ---
@@ -98,31 +110,46 @@ GitHub.com provides additional tools for managing Copilot at the organizational 
 **Why this matters:** Shared conversations create a knowledge base of effective AI interactions that your entire team can learn from and build upon.
 
 #### Share a Conversation
+
 1. **Navigate to GitHub Copilot:** Go to [https://github.com/copilot](https://github.com/copilot)
 2. **Start a chat:** Start a conversation. In the chat window, type the following prompt:
    ```markdown
-   What are the advantages of the Go programming language?
+   What are the best practices for optimizing image loading performance in a Next.js 16 photo gallery?
    ```
 3. **Share the conversation:** Click the **"Share"** button at the top-right of the chat window
-4. **Select share:** Select share and copy the link to share with your team
+4. **Select share:** Select Share and copy the link to share with your team
 
 #### View Shared Conversation
+
 1. **Navigate to GitHub Copilot:** Go to [https://github.com/copilot](https://github.com/copilot)
 2. **Access sharing options:** Click on your user icon on the bottom-left corner
 3. **Open conversation management:** Select **"Manage shared conversations"**
 
 #### What to Explore with Shared Conversations
+
 - **Shared Conversations:** Browse conversations shared by your team
 - **Categories:** See how conversations are organized by topic
 - **Usage Patterns:** Notice which types of conversations are shared most often
 
 **💼 Best Practices for Sharing:**
+
 - Share conversations that solved complex problems
 - Include context about when and why certain approaches work
 - Tag conversations with relevant keywords for easy discovery
 
+## ✅ Completion Checklist
+
+Mark off each item as you complete it:
+
+- [ ] Opened the Copilot Chat Debug panel and explored prompts, system prompts, and metadata
+- [ ] Exported a chat conversation and confirmed the output file was created
+- [ ] Imported a chat conversation shared by a teammate (or re-imported your own)
+- [ ] Added at least one personal instruction and observed a change in Copilot's responses
+- [ ] Shared a conversation and copied the shareable link
+- [ ] Browsed shared conversations in "Manage shared conversations"
+
 ## 🚀 What's Next?
 
-Congratulations! Second demo has been complete.
+Congratulations! You have completed the second demo.
 
 👉 **[Start Customize Copilot Demo](./customize-copilot.md)**

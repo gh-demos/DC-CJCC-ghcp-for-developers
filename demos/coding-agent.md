@@ -5,7 +5,9 @@ Welcome to the GitHub Copilot Cloud Agent demo! This hands-on guide will help yo
 ---
 
 ## What You'll Learn
+
 By the end of this demo, you will:
+
 - [ ] Assign GitHub Copilot to a GitHub issue
 - [ ] Review Copilot-generated pull requests and session details
 - [ ] Practice collaborative code review and iteration
@@ -14,9 +16,11 @@ By the end of this demo, you will:
 
 ## 🎯 Step 1: Assign GitHub Copilot to an Issue
 
-1. Open the issue you created in the previous MCP exercise.
+1. Open the **Add dark mode toggle** issue created in the MCP exercise. Confirm that its URL starts with `https://tdcj.ghe.com/` and that it belongs to your persona organization's `tdcj-copilot-intermediate` repository.
 2. Assign **GitHub Copilot** to the issue.
 3. Observe as Copilot works through the steps and generates a solution.
+
+If you skipped the MCP exercise, create the **Add dark mode toggle** issue from the **Issues** tab of your Enterprise repository before continuing.
 
 ---
 

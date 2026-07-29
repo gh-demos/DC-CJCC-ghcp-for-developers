@@ -1,7 +1,8 @@
 # Copilot Instructions for Photo Gallery & Portfolio
 
 ## Project Overview
-This is a Photo Gallery & Portfolio application built with Next.js 15, TypeScript, and Tailwind CSS. The application follows a component-driven architecture with:
+
+This is a Photo Gallery & Portfolio application built with Next.js 16, TypeScript, and Tailwind CSS. The application follows a component-driven architecture with:
 
 - **Client-Side Interactions** using React hooks and Framer Motion animations
 - **Smart UI Components** for consistent layout and styling
@@ -11,6 +12,7 @@ This is a Photo Gallery & Portfolio application built with Next.js 15, TypeScrip
 ## Architecture
 
 ### Core Components
+
 1. **Layout Components** (`src/components/ui/layout/`)
    - `Hero.tsx` - Page headers with title and description
    - `SectionContainer.tsx` - Consistent section wrappers
@@ -23,15 +25,17 @@ This is a Photo Gallery & Portfolio application built with Next.js 15, TypeScrip
    - `FeatureCard.tsx` - Reusable feature highlight cards
 
 ### Data Flow
+
 - Mock data is stored in `src/lib/` for development
 - State management uses React hooks
 - Component props follow strict TypeScript interfaces
 - Data transformations happen at the component level
 
 ### Project Structure
+
 ```
 src/
-├── app/                # Next.js 15 App Router pages
+├── app/                # Next.js 16 App Router pages
 ├── components/
 │   ├── ui/            # Reusable UI components
 │   ├── gallery/       # Gallery-specific components
@@ -42,7 +46,9 @@ src/
 ## Component Patterns
 
 ### UI Components
+
 1. **Layout Components**: Use `<SectionContainer>` and `<SectionTitle>` for consistent page structure
+
 ```tsx
 <SectionContainer>
   <SectionTitle title="Section Name" viewAllLink="/optional-link" />
@@ -51,6 +57,7 @@ src/
 ```
 
 2. **Feature Cards**: Use for highlighting features or actions
+
 ```tsx
 <FeatureCard
   icon={IconComponent}
@@ -61,43 +68,51 @@ src/
 ```
 
 3. **Stats Display**: Use `<StatsGrid>` for metric displays
+
 ```tsx
-<StatsGrid stats={[
-  {
-    label: "Metric Name",
-    value: "123",
-    icon: IconComponent,
-    color: 'blue' | 'green' | 'purple' | 'orange'
-  }
-]} />
+<StatsGrid
+  stats={[
+    {
+      label: "Metric Name",
+      value: "123",
+      icon: IconComponent,
+      color: "blue" | "green" | "purple" | "orange",
+    },
+  ]}
+/>
 ```
 
 ### Styling Conventions
+
 1. Use Tailwind's color scale with dark mode support
+
    ```tsx
-   className="text-slate-900 dark:text-white"
-   className="bg-white dark:bg-slate-800"
+   className = "text-slate-900 dark:text-white";
+   className = "bg-white dark:bg-slate-800";
    ```
 
 2. Follow gradient background pattern
+
    ```tsx
-   className="page-gradient" // Defined in globals.css
+   className = "page-gradient"; // Defined in globals.css
    ```
 
 3. Use consistent spacing and layout classes
    ```tsx
-   "container mx-auto px-4"  // Container
-   "grid md:grid-cols-3 gap-6" // Responsive grid
+   "container mx-auto px-4"; // Container
+   "grid md:grid-cols-3 gap-6"; // Responsive grid
    ```
 
 ## Development Workflow
 
 ### Running the Project
+
 ```bash
 npm run dev  # Starts development server with Turbopack
 ```
 
 ### Key Files to Reference
+
 - `COMPONENT_USAGE_GUIDE.md` - Examples of component usage
 - `mock-*-data.ts` files - Data structure examples
 - `page.tsx` files - Page layout patterns

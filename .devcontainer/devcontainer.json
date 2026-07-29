@@ -11,7 +11,8 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install && npm run dev",
+  "postCreateCommand": "npm install",
+  "postStartCommand": "nohup npm run dev > /tmp/nextjs-dev.log 2>&1 &",
   "customizations": {
     "vscode": {
       "extensions": [

@@ -44,7 +44,7 @@ export default function AdminPage() {
         </div>
 
         {/* Galleries Table */}
-        <SectionTitle title="Recent Galleries" viewAllLink="/admin/galleries" />
+        <SectionTitle title="Recent Galleries" />
         <div className="card-base overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">

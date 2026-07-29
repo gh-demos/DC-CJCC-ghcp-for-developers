@@ -1,6 +1,6 @@
 # Photo Gallery & Portfolio
 
-A professional photo gallery and portfolio application built with Next.js 15, TypeScript, and Tailwind CSS. This project is designed for **demoing GitHub Copilot features** in a real-world, component-driven Next.js application. The included demos showcase how Copilot can assist with code generation, refactoring, UI building, and more.
+A professional photo gallery and portfolio application built with Next.js 16, TypeScript, and Tailwind CSS. This project is designed for **demoing GitHub Copilot features** in a real-world, component-driven Next.js application. The included demos showcase how Copilot can assist with code generation, refactoring, UI building, and more.
 
 ## Demos
 
@@ -21,16 +21,20 @@ After finishing the demo, don't forget this quick follow-up:
 
 1. Add in the overview, key skills, and demo link to the [demo README](demos/README.md)
 
+## Workshop Attendee Setup
+
+Workshop attendees using `tdcj.ghe.com` must first follow Steps 1-6 in the [Workshop Attendee Setup](demos/attendee-setup.md). Those shared steps explain how to clone the public workshop source and push it to a new, independent Internal repository in a pre-provisioned persona organization without creating a fork. Attendees then choose either GitHub Codespaces or local development; they do not need to complete both options.
+
 ## Getting Started
 
 ### Technical Requirements
 
-- **Node.js** v18 or newer
+- **Node.js** v20.9 or newer
 - **npm** (or yarn, pnpm, bun)
 
 ### Quick Start with GitHub Codespaces
 
-The fastest way to get started is using GitHub Codespaces:
+For general use, the fastest way to get started is GitHub Codespaces. Workshop attendees using `tdcj.ghe.com` should instead complete the shared repository setup above and create the codespace from their new Internal repository.
 
 1. Click the **"Code"** button on the GitHub repository page
 2. Select the **"Codespaces"** tab
@@ -38,19 +42,20 @@ The fastest way to get started is using GitHub Codespaces:
 4. Wait for the codespace to build and start
 
 The codespace will automatically:
+
 - Install all dependencies (`npm install`)
 - Start the development server (`npm run dev`)
 - Configure GitHub Copilot and essential VS Code extensions
 - Forward port 3000 for the Next.js application
 
-Once ready, you can access the application at the forwarded port URL provided in the terminal.
+Once ready, open the forwarded port 3000 URL from the notification or the **Ports** panel. If the server does not start, check `/tmp/nextjs-dev.log` in the codespace.
 
 ### Local Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo.git
-   cd gallery-repo
+   git clone https://github.com/nate-demo/tdcj-copilot-intermediate.git
+   cd tdcj-copilot-intermediate
    ```
 2. Install dependencies:
    ```bash
@@ -66,7 +71,7 @@ Once ready, you can access the application at the forwarded port URL provided in
 
 ```bash
 src/
-├── app/                 # Next.js 15 App Router pages
+├── app/                 # Next.js 16 App Router pages
 ├── components/          # Reusable React components
 ├── lib/                 # Utility functions and helpers
 demos/                   # Demo guides and templates
