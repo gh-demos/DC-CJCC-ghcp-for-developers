@@ -5,7 +5,9 @@ Welcome to this repository! You're probably wondering what it is and how it work
 Let's start off by learning the different modes.
 
 ## What You'll Learn
+
 By the end of this demo, you will:
+
 - [ ] Understand GitHub Copilot's core features
 - [ ] Know how to use chat participants and slash commands
 - [ ] Be able to generate code with AI assistance
@@ -36,6 +38,7 @@ Delegate session: Local
 **1:** Type the following slash command in the Copilot chat:
 
 **Prompt:**
+
 ```markdown
 /
 ```
@@ -45,6 +48,7 @@ Scroll through the available commands listed in the dropdown.
 **2:** View the available tools by typing the following in the Copilot chat:
 
 **Prompt:**
+
 ```markdown
 #
 ```
@@ -54,6 +58,7 @@ Scroll through the available commands listed in the dropdown.
 **3:** Do the same for viewing available chat participants:
 
 **Prompt:**
+
 ```markdown
 @
 ```
@@ -67,25 +72,32 @@ Scroll through the available chat participants listed in the dropdown.
 ## 📚 Step 2: Learn About the Project
 
 ### 2.1 Get Project Overview
+
 **Prompt:**
+
 ```markdown
-Give me a summary of the project and give an overview of the most impactful files. 
+Give me a summary of the project and give an overview of the most impactful files.
 ```
 
 **Follow-up Action:**
+
 - Select the first page in the "Most Impactful Files"
 - Highlight the first section
 
 ### 2.2 Explain Selected Code
+
 **Prompt:**
+
 ```markdown
-/explain 
+/explain
 ```
 
 **What this does:** Copilot will explain the highlighted code section in detail.
 
 ### 2.3 Get Improvement Suggestions
+
 **Prompt:**
+
 ```markdown
 Tell me about the improvements that can be made in this repo.
 ```
@@ -97,17 +109,20 @@ Tell me about the improvements that can be made in this repo.
 Keep the Copilot Chat session, we will be using it in Step 4 to plan and implement. For this step, utilize inline code completions directly in your editor to generate the footer code.
 
 ### Code Completions Instructions
-1. **Navigate to file:** Open [`src/app/layout.tsx`](src/app/layout.tsx)
+
+1. **Navigate to file:** Open [`src/app/layout.tsx`](../src/app/layout.tsx)
 2. **Find location:** Go to line 52 `{/* REPLACE THIS COMMENT */}`
 3. **Remove line 52 comment:** and replace it with the following comment:
 
 ```tsx
-{/* Create a footer for this section. It should contain the logo and copyright information. */}
+{
+  /* Create a footer for this section. It should contain the logo and copyright information. */
+}
 ```
 
-5. **Wait for suggestion:** Copilot will suggest code automatically
-6. **Accept suggestion:** Press `Tab` to accept or `Esc` to dismiss
-7. **Check your changes:** Save the file and refresh [http://localhost:3000](http://localhost:3000) to see your new footer
+4. **Wait for suggestion:** Copilot will suggest code automatically
+5. **Accept suggestion:** Press `Tab` to accept or `Esc` to dismiss
+6. **Check your changes:** Save the file and refresh [http://localhost:3000](http://localhost:3000) to see your new footer
 
 ## 📝 Step 4: Plan and implement
 
@@ -152,7 +167,7 @@ Fix pagination in GalleryGrid.tsx: Change startIndex from 0 to (currentPage - 1)
 1. **Select Source Control in the Activity Bar:** Click the Source Control icon in the left sidebar to open the source control panel.
 2. **Start review:** At the top of the Source Control view, hover over CHANGES, then click the `Code Review - Unstaged Changes` button. _See image below for reference_
 
-![Code review button](/demos/images/code-review.png)
+![Code review button](images/code-review.png)
 
 3. **View comments:** If Copilot has any comments, they will be shown inline in your file(s), and in the Problems tab.
 
@@ -163,6 +178,7 @@ Fix pagination in GalleryGrid.tsx: Change startIndex from 0 to (currentPage - 1)
 3. **Verify style:** Does it follow the project's coding standards?
 
 ### Commit Your Changes
+
 1. **Open Source Control:** Click the Source Control icon in the left sidebar
 2. **Generate commit message:** Hover over the commit message box → Click "Generate Commit Message with Copilot"
 3. **Review and edit:** Modify the generated message if needed

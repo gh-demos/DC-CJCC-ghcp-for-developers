@@ -21,6 +21,10 @@ After finishing the demo, don't forget this quick follow-up:
 
 1. Add in the overview, key skills, and demo link to the [demo README](demos/README.md)
 
+## Workshop Attendee Setup
+
+Workshop attendees using `tdcj.ghe.com` must first follow the [Workshop Attendee Setup](demos/attendee-setup.md). It explains how to clone the public workshop source and push it to a new, independent Internal repository in a pre-provisioned persona organization without creating a fork.
+
 ## Getting Started
 
 ### Technical Requirements
@@ -38,6 +42,7 @@ The fastest way to get started is using GitHub Codespaces:
 4. Wait for the codespace to build and start
 
 The codespace will automatically:
+
 - Install all dependencies (`npm install`)
 - Start the development server (`npm run dev`)
 - Configure GitHub Copilot and essential VS Code extensions
@@ -49,8 +54,8 @@ Once ready, you can access the application at the forwarded port URL provided in
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo.git
-   cd gallery-repo
+   git clone https://github.com/nate-demo/tdcj-copilot-intermediate.git
+   cd tdcj-copilot-intermediate
    ```
 2. Install dependencies:
    ```bash

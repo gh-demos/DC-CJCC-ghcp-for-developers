@@ -3,7 +3,9 @@
 Welcome to the GitHub Copilot Spaces demo! In this exercise, you'll learn how to create and utilize GitHub Copilot Spaces to collaborate on development tasks within the Photo Gallery & Portfolio application.
 
 ## What You'll Learn
+
 By the end of this demo, you will:
+
 - [ ] Understand what GitHub Copilot Spaces are and their benefits
 - [ ] Know how to create a new Copilot Space
 - [ ] Be able to set up a Space with specific goals and context
@@ -16,7 +18,10 @@ By the end of this demo, you will:
 
 **Goal:** Set up a dedicated Copilot Space for working on gallery features.
 
+This exercise uses the **Review upload security** and **Create API documentation plan** issues from the MCP exercise. If those issues were not created, open the **Issues** tab in your Enterprise repository, create them manually with those titles, and keep both issue URLs available before continuing.
+
 ### Setup
+
 1. Go to `https://github.com/copilot/spaces`
 2. Select `Create Space`
 
@@ -30,6 +35,7 @@ By the end of this demo, you will:
 **Adding instructions**
 
 5. Select `Instructions` and add the following prompt:
+
 ```markdown
 You are a security expert helping to analyze and improve the security posture of a Next.js 15 photo gallery application. Focus on:
 
@@ -43,22 +49,26 @@ You are a security expert helping to analyze and improve the security posture of
 
 Provide specific code examples and security recommendations that follow industry standards and OWASP guidelines. Consider both client-side and server-side security measures.
 ```
+
 6. Select save
 
 **Adding sources**
 
 7. Select `Add sources` and select `Add files and repositories`
 8. Add the following files and press `save`
+
 ```markdown
 src/components/upload/UploadZone.tsx
 src/lib/mock-photo-data.ts
 src/app/layout.tsx
 next.config.ts
 ```
+
 9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/nate-demo/copilot-intermediate-gallery-repo/issues/3` and press `save`
+10. Add the **Review upload security** issue URL created in the MCP exercise and press `save`
 11. Select `Add sources` and select `Add text content`
 12. Add the following content and press `save`
+
 ```markdown
 ## OWASP Top 10 2021 - Key Security Risks for Web Applications
 
@@ -74,6 +84,7 @@ next.config.ts
 10. **A10 Server-Side Request Forgery** - SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL
 
 ## Next.js Security Headers
+
 - Content Security Policy (CSP)
 - X-Frame-Options
 - X-Content-Type-Options
@@ -81,6 +92,7 @@ next.config.ts
 - Permissions-Policy
 
 ## File Upload Security Considerations
+
 - File type validation
 - File size limits
 - Malware scanning
@@ -98,6 +110,7 @@ next.config.ts
 **Adding instructions**
 
 5. Select `Instructions` and add the following prompt:
+
 ```markdown
 You are a technical documentation specialist helping to create comprehensive documentation for a Next.js 15 photo gallery application. Focus on:
 
@@ -111,12 +124,14 @@ You are a technical documentation specialist helping to create comprehensive doc
 
 Follow industry best practices for technical writing, API documentation standards (OpenAPI 3.0), and modern documentation tools. Create clear, actionable documentation that serves both developers and end users.
 ```
+
 6. Select save
 
 **Adding sources**
 
 7. Select `Add sources` and select `Add files and repositories`
 8. Add the following files and press `save`
+
 ```markdown
 README.md
 COMPONENT_USAGE_GUIDE.md
@@ -124,32 +139,38 @@ src/components/ui/index.ts
 src/app/page.tsx
 package.json
 ```
+
 9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/nate-demo/copilot-intermediate-gallery-repo/issues/4` and press `save`
+10. Add the **Create API documentation plan** issue URL created in the MCP exercise and press `save`
 11. Select `Add sources` and select `Add text content`
 12. Add the following content and press `save`
+
 ```markdown
 # Documentation Standards
 
 ## API Documentation
+
 - OpenAPI 3.0 specification with complete schemas
 - Clear endpoint naming and HTTP status codes
 - Request/response examples and error handling
 - Authentication and rate limiting documentation
 
 ## Code Documentation
+
 - Function/method purpose and parameters
 - Usage examples and dependencies
 - Error conditions and return values
 - Performance considerations
 
 ## Architecture Documentation
+
 - Decision records (ADRs) with context and rationale
 - System design and component relationships
 - Deployment and configuration guides
 - Troubleshooting and maintenance procedures
 
 ## Tools & Formats
+
 - **API Docs**: Swagger UI, Postman, Insomnia
 - **Code Docs**: JSDoc, TypeDoc, inline comments
 - **Wikis**: GitHub Wiki, Notion, Confluence
