@@ -142,7 +142,7 @@ Suggested prompt:
 Implement tag autocomplete for the Upload page tags input. For example, typing "w" should suggest "wedding" and "wildlife". Create a new file in the components/upload folder for the autocomplete input if needed.
 ```
 
-5. After implementation, check credits again and compare to the two bad-habit runs.
+3. After implementation, check credits again and compare to the two bad-habit runs.
 
 ### Recommended practice 2: Research, plan, and implement in separate chats
 
