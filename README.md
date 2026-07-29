@@ -23,7 +23,7 @@ After finishing the demo, don't forget this quick follow-up:
 
 ## Workshop Attendee Setup
 
-Workshop attendees using `tdcj.ghe.com` must first follow the [Workshop Attendee Setup](demos/attendee-setup.md). It explains how to clone the public workshop source and push it to a new, independent Internal repository in a pre-provisioned persona organization without creating a fork.
+Workshop attendees using `tdcj.ghe.com` must first follow Steps 1-6 in the [Workshop Attendee Setup](demos/attendee-setup.md). Those shared steps explain how to clone the public workshop source and push it to a new, independent Internal repository in a pre-provisioned persona organization without creating a fork. Attendees then choose either GitHub Codespaces or local development; they do not need to complete both options.
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ Workshop attendees using `tdcj.ghe.com` must first follow the [Workshop Attendee
 
 ### Quick Start with GitHub Codespaces
 
-The fastest way to get started is using GitHub Codespaces:
+For general use, the fastest way to get started is GitHub Codespaces. Workshop attendees using `tdcj.ghe.com` should instead complete the shared repository setup above and create the codespace from their new Internal repository.
 
 1. Click the **"Code"** button on the GitHub repository page
 2. Select the **"Codespaces"** tab

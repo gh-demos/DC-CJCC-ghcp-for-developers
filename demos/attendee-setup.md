@@ -1,6 +1,6 @@
 # Workshop Attendee Setup
 
-Complete this setup before starting the workshop demos. You will clone the public workshop repository and push it to a new, independent repository owned by your persona organization on `tdcj.ghe.com`.
+Complete Steps 1-6 before starting the workshop demos. These steps create a new, independent repository owned by your persona organization on `tdcj.ghe.com`. Afterward, choose either GitHub Codespaces or local development as your development environment.
 
 ## What You'll Accomplish
 
@@ -150,11 +150,27 @@ git remote -v
 
 ## Continue to the Workshop
 
-Install the dependencies and start the application:
+Steps 1-6 are required for both options below. Choose one development environment; you do not need to complete both options.
+
+### Option 1: GitHub Codespaces
+
+Use this option if GitHub Codespaces is enabled for your persona organization:
+
+1. Open the new Internal repository in your persona organization on `tdcj.ghe.com`.
+2. Select **Code**, then select the **Codespaces** tab.
+3. Select **Create codespace on main**.
+4. Wait for the codespace to install the dependencies, start the development server, and forward port 3000.
+5. Open the forwarded port URL when it appears.
+
+### Option 2: Local Development
+
+Use the local repository configured in Steps 1–6. Install the dependencies and start the application:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then continue with the [Features Demo](features-demo.md).
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+After completing either option, continue with the [Features Demo](features-demo.md).
