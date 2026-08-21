@@ -1,0 +1,159 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  PHOTOGRAPHER
+  ADMIN
+}
+
+enum GalleryVisibility {
+  PUBLIC
+  PRIVATE
+  CLIENT_REVIEW
+}
+
+enum PhotoStatus {
+  PENDING
+  UPLOADING
+  VERIFYING
+  READY
+  FAILED
+  DELETED
+}
+
+enum AuditAction {
+  UPLOAD_INITIALIZED
+  UPLOAD_COMPLETED
+  UPLOAD_REJECTED
+  PHOTO_DELETED
+  GALLERY_CREATED
+  ROLE_CHANGED
+}
+
+model User {
+  id        String    @id @default(cuid())
+  clerkId   String    @unique
+  email     String    @unique
+  role      UserRole  @default(PHOTOGRAPHER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  galleries Gallery[]
+  photos    Photo[]
+  uploads   Upload[]
+  auditLogs AuditLog[] @relation("AuditActor")
+}
+
+model Gallery {
+  id          String            @id @default(cuid())
+  ownerId     String
+  name        String
+  slug        String            @unique
+  description String?
+  visibility  GalleryVisibility @default(PRIVATE)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  owner       User              @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  photos      GalleryPhoto[]
+  uploads     Upload[]
+
+  @@index([ownerId, updatedAt])
+  @@index([visibility, updatedAt])
+}
+
+model Photo {
+  id           String      @id @default(cuid())
+  ownerId      String
+  storageKey   String      @unique
+  storageUrl   String
+  originalName String
+  mimeType     String
+  bytes        Int
+  width        Int?
+  height       Int?
+  title        String
+  description  String?
+  status       PhotoStatus @default(PENDING)
+  visibility   GalleryVisibility @default(PRIVATE)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  deletedAt    DateTime?
+  owner        User        @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  galleries    GalleryPhoto[]
+  tags         PhotoTag[]
+  upload       Upload?
+
+  @@index([ownerId, status, createdAt])
+  @@index([visibility, status, createdAt])
+}
+
+model GalleryPhoto {
+  galleryId String
+  photoId   String
+  position  Int       @default(0)
+  createdAt DateTime  @default(now())
+  gallery   Gallery   @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+  photo     Photo     @relation(fields: [photoId], references: [id], onDelete: Cascade)
+
+  @@id([galleryId, photoId])
+  @@index([galleryId, position])
+}
+
+model Tag {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  createdAt DateTime   @default(now())
+  photos    PhotoTag[]
+}
+
+model PhotoTag {
+  photoId String
+  tagId   String
+  photo   Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  tag     Tag   @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([photoId, tagId])
+  @@index([tagId, photoId])
+}
+
+model Upload {
+  id             String      @id @default(cuid())
+  ownerId        String
+  galleryId      String
+  photoId        String?     @unique
+  idempotencyKey String      @unique
+  storageKey     String      @unique
+  originalName   String
+  mimeType       String
+  expectedBytes  Int
+  metadata       Json
+  status         PhotoStatus @default(PENDING)
+  expiresAt      DateTime
+  completedAt    DateTime?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  owner          User        @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  gallery        Gallery     @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+  photo          Photo?      @relation(fields: [photoId], references: [id], onDelete: SetNull)
+
+  @@index([ownerId, status, createdAt])
+  @@index([expiresAt, status])
+}
+
+model AuditLog {
+  id        String      @id @default(cuid())
+  actorId   String?
+  action    AuditAction
+  entityId  String?
+  metadata  Json?
+  createdAt DateTime    @default(now())
+  actor     User?       @relation("AuditActor", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([action, createdAt])
+  @@index([entityId, createdAt])
+}
