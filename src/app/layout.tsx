@@ -10,6 +10,7 @@ import { Geist } from "next/font/google";
 import Link from "next/link";
 import { Camera } from "lucide-react";
 import ThemeToggle from "@/components/ui/layout/ThemeToggle";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,7 +33,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var key="theme-preference";var savedTheme=localStorage.getItem(key);var theme=savedTheme==="dark"||savedTheme==="light"?savedTheme:(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var root=document.documentElement;root.classList.toggle("dark",theme==="dark");root.style.colorScheme=theme;}catch(e){}})();`,
+            __html: THEME_INIT_SCRIPT,
           }}
         />
       </head>

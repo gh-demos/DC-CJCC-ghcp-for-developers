@@ -2,14 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import { THEME_STORAGE_KEY } from "@/lib/theme";
 
 type Theme = "light" | "dark";
-
-const THEME_STORAGE_KEY = "theme-preference";
-
-function getSystemTheme(): Theme {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
 
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
@@ -19,15 +14,18 @@ function applyTheme(theme: Theme) {
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
     const initialTheme = savedTheme === "dark" || savedTheme === "light"
       ? savedTheme
-      : getSystemTheme();
+      : document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
 
-    applyTheme(initialTheme);
     setTheme(initialTheme);
+    setIsMounted(true);
   }, []);
 
   const toggleTheme = () => {
@@ -42,11 +40,10 @@ export default function ThemeToggle() {
     <button
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       aria-pressed={theme === "dark"}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 ${isMounted ? "" : "invisible"}`}
       onClick={toggleTheme}
       type="button"
     >
-      <span className="sr-only">Toggle color mode</span>
       {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>
   );
