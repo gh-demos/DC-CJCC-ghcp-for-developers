@@ -9,6 +9,8 @@ import {
 import { Geist } from "next/font/google";
 import Link from "next/link";
 import { Camera } from "lucide-react";
+import ThemeToggle from "@/components/ui/layout/ThemeToggle";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +29,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: THEME_INIT_SCRIPT,
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} antialiased`}>
         <ClerkProvider>
           <header className="border-b bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm sticky top-0 z-40">
@@ -39,10 +48,11 @@ export default function RootLayout({
                     Portfolio Gallery
                   </h1>
                 </Link>
-                <nav className="flex items-center gap-6">
+                <nav className="flex items-center gap-3 md:gap-6">
                   <Link href="/gallery" className="nav-link">
                     Gallery
                   </Link>
+                  <ThemeToggle />
                   <SignedIn>
                     <Link href="/upload" className="nav-link">
                       Upload
