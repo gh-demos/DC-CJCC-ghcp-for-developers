@@ -17,7 +17,12 @@ export default function ThemeToggle() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    let savedTheme: string | null = null;
+    try {
+      savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    } catch {
+      savedTheme = null;
+    }
     const initialTheme = savedTheme === "dark" || savedTheme === "light"
       ? savedTheme
       : document.documentElement.classList.contains("dark")
@@ -32,7 +37,9 @@ export default function ThemeToggle() {
     const nextTheme: Theme = theme === "dark" ? "light" : "dark";
 
     applyTheme(nextTheme);
-    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    } catch {}
     setTheme(nextTheme);
   };
 
